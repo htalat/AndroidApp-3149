@@ -11,6 +11,13 @@ import android.view.ViewGroup;
  */
 public class ItemsFragment extends Fragment
 {
+/*    // Construct the data source
+    ArrayList<User> arrayOfUsers = new ArrayList<User>();
+    // Create the adapter to convert the array to views
+    UsersAdapter adapter = new UsersAdapter(this, arrayOfUsers);
+    // Attach the adapter to a ListView
+    ListView listView = (ListView) findViewById(R.id.lvItems);
+    listView.setAdapter(adapter);*/
     // The onCreateView method is called when Fragment should create its View object hierarchy,
     // either dynamically or via XML layout inflation.
     @Override
