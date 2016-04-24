@@ -4,8 +4,6 @@ package com.buffapps.hassan.app3149;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.app.FragmentManager;
-import android.app.FragmentTransaction;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -41,49 +39,38 @@ public class MainActivity extends AppCompatActivity
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            //super.onBackPressed();
         }
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
+
         Fragment fragment = null;
         Class fragmentClass = null;
-        //FragmentManager fm = getFragmentManager();
-        //FragmentTransaction fragmentTransaction = fm.beginTransaction();
 
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
+        if (id == R.id.nav_items) {
+
             fragmentClass = ItemsFragment.class;
-            //fragmentTransaction.replace(R.id.placeholder, f1);
-            //ItemsFragment f1 = new ItemsFragment();
-            //framen
+
         } else if (id == R.id.nav_gallery) {
             fragmentClass = ChoresFragment.class;
 
@@ -111,4 +98,5 @@ public class MainActivity extends AppCompatActivity
 
         return true;
     }
+
 }

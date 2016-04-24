@@ -28,7 +28,7 @@ public class ItemAdapter extends ArrayAdapter<Item> {
         // Lookup view for data population
         TextView txtItemName = (TextView) convertView.findViewById(R.id.itemName);
         TextView txtItemQuantity = (TextView) convertView.findViewById(R.id.itemQuantity);
-        TextView txtItemPrice = (TextView) convertView.findViewById(R.id.itemQuantity);
+        TextView txtItemPrice = (TextView) convertView.findViewById(R.id.itemPrice);
 
         // Populate the data into the template view using the data object
         txtItemName.setText(item.getName());
